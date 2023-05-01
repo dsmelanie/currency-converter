@@ -1,0 +1,65 @@
+@use '../../styles/vars';
+
+$toggler-width: 70px;
+$toggler-width-half: calc($toggler-width / 2);
+$ball-width: calc($toggler-width-half - 0.8em);
+
+.darkmode {
+  position: absolute;
+  top: 2em;
+  right: 2em;
+
+  .toggle-wrapper {
+    width: $toggler-width;
+    display: block;
+
+    .toggle {
+      width: $toggler-width;
+      height: $toggler-width-half;
+      background: vars.$light-color;
+      border-radius: calc($toggler-width / 3);
+      padding: 0.4em;
+      position: relative;
+      margin: auto;
+      cursor: pointer;
+
+      &:before {
+        content: "";
+        display: block;
+        height: $ball-width;
+        width: $ball-width;
+        border-radius: $ball-width;
+        background: vars.$main-color;;
+        position: absolute;
+        z-index: 2;
+        transform: translate(0);
+        transition: transform 0.2s;
+      }
+
+      .icons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        margin: 0 1px;
+      }
+      .icons img {
+        fill: #fff;
+        height: calc($ball-width - 1.5px);
+        width: calc($ball-width - 1.5px);
+        z-index: 0;
+      }
+      input {
+        position: absolute;
+        top: 0;
+        opacity: 0;
+      }
+    }
+    
+    .toggle.enabled::before {
+      transform: translateX($toggler-width-half);
+    }
+    
+  }
+ 
+}

@@ -14,5 +14,12 @@
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
   }
+}
 
+// Dark mode
+.app--dark {
+  .amount {
+    background-color: vars.$dark-color;
+    color: vars.$light-color;
+  }
 }

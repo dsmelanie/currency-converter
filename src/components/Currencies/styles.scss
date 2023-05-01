@@ -3,7 +3,7 @@
 .currencies {
   background-color: vars.$light-color;
   text-align: left;
-  max-height: 50vh;
+  max-height: 35vh;
   overflow-y: auto;
   color: vars.$main-color;
   font-weight: vars.$alt-weight;
@@ -39,8 +39,40 @@
   }
 }
 
-// Scrollbar
+// Dark mode
+.app--dark {
 
+  .currencies {
+    background-color: vars.$dark-color;
+    color: vars.$light-color;
+
+    &-search {
+      background-color: vars.$dark-color;
+      color: vars.$light-color;
+    }
+
+    &-item {
+      &:hover {
+        background-color: vars.$main-color;
+        transition: background-color 0.2s;
+      }
+    }
+  }
+
+  .currencies::-webkit-scrollbar-track {
+    background: vars.$dark-color;
+  }
+  
+  .currencies::-webkit-scrollbar-thumb {
+    background-color: vars.$main-color;
+    border-radius: 10px;
+    border: 2px solid vars.$dark-color;
+  }
+
+  
+}
+
+// Scrollbar
 .currencies::-webkit-scrollbar {
   width: 10px;
 }

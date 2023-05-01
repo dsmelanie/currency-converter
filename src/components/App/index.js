@@ -7,11 +7,14 @@ import Amount from '../Amount';
 import Currencies from '../Currencies';
 import Toggler from '../Toggler';
 import Footer from '../Footer';
+import DarkMode from '../DarkMode';
 // Styles
 import './styles.scss';
 
+
 function App() {
   const [isVisible, setIsVisible] = useState(true);
+  const [isDark, setIsDark] = useState(false);
   const [currencyName, setCurrencyName] = useState('Australian Dollar');
   const [search, setSearch] = useState('');
   const [baseAmount, setBaseAmount] = useState(1);
@@ -35,11 +38,19 @@ function App() {
   const filteredCurrencies = getFilteredCurrenciesByCurrencyName();
 
   return (
-    <div className="app">
+    <div className={(isDark) ? 'app app--dark' : 'app'}>
       <Header baseAmount={baseAmount} setBaseAmount={setBaseAmount} />
       <Toggler isVisible={isVisible} toggleIsVisible={() => setIsVisible(!isVisible)} />
+      <DarkMode isDark={isDark} toggleDarkMode={() => setIsDark(!isDark)} />
       <Amount currencyName={currencyName} result={result} />
-      { isVisible && <Currencies currencies={filteredCurrencies} setCurrencyName={setCurrencyName} search={search} setSearch={setSearch} /> }
+      { isVisible && (
+        <Currencies
+          currencies={filteredCurrencies}
+          setCurrencyName={setCurrencyName}
+          search={search}
+          setSearch={setSearch}
+        />
+      )}
       <Footer />
     </div>
   );
