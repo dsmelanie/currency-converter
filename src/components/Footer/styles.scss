@@ -1,0 +1,30 @@
+@use '../../styles/vars';
+
+.footer {
+  font-family: 'Sniglet', cursive;
+  border-radius: 0px 0px 15px 15px;
+  color: vars.$light-color;
+  background-color: vars.$main-color;
+  padding: 2rem;
+
+  &-text {
+    font-weight: vars.$alt-weight;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+  }
+  
+  b {
+    color: vars.$alt-color;
+    transition: color 0.2s;
+  }
+
+  a {
+    color: vars.$light-color;
+    transition: color 0.2s;
+
+    &:hover {
+      color: vars.$alt-color;
+      transition: color 0.2s;
+    }
+  }
+}

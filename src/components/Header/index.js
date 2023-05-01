@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 function Header({ baseAmount, setBaseAmount }) {
   return (
     <header className="header">
-      <h1 className="header-title">Currency Converter</h1>
+      <h1 className="header-title">Converter</h1>
       <p className="header-amount">
         <input
           className="header-input"
@@ -13,7 +13,7 @@ function Header({ baseAmount, setBaseAmount }) {
           onChange={(event) => {
             setBaseAmount(event.target.value);
           }}
-        /> euro
+        /> €
       </p>
     </header>
   );

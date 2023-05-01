@@ -1,6 +1,7 @@
 @use '../../styles/vars';
 
 .app {
+  font-family: 'Sniglet', cursive;
   color: vars.$main-color;
   width: 500px;
   margin: 2rem auto;

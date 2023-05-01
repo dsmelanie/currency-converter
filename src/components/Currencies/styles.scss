@@ -7,9 +7,21 @@
   overflow-y: auto;
   color: vars.$main-color;
   font-weight: vars.$alt-weight;
-  border-radius: 0px 0px 15px 15px;
-  &-title {
+
+  &-search {
     font-family: 'Sniglet', cursive;
+    color: #000;
+    width: 100%;
+    border: none;
+    padding: 1rem;
+
+    &::placeholder {
+      color: vars.$alt-color;
+      opacity: 100%;
+    }
+  }
+
+  &-title {
     font-weight: vars.$main-weight;
     margin: 1rem;
   }
@@ -25,7 +37,6 @@
       transition: background-color 0.2s;
     }
   }
-
 }
 
 // Scrollbar
