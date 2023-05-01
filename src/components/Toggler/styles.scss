@@ -29,3 +29,13 @@
     object-fit: cover;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .toggler {
+    
+    img {
+    width: 20px;
+    height: 20px;
+   } 
+  }
+}
