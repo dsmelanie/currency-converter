@@ -1,0 +1,15 @@
+@use '../../styles/vars';
+
+.amount {
+  background-color: vars.$light-color;
+  color: vars.$main-color;
+  text-align: center;
+  padding: 2rem;
+
+  &-value {
+    font-weight: vars.$main-weight;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+}

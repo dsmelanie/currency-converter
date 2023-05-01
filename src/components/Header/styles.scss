@@ -1,0 +1,16 @@
+@use '../../styles/vars';
+
+.header {
+  font-family: 'Sniglet', cursive;
+  border-radius: 15px 15px 0px 0px;
+  color: vars.$light-color;
+  background-color: vars.$main-color;
+  padding: 2rem;
+
+  &-title {
+    font-weight: vars.$main-weight;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+}

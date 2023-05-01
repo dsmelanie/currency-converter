@@ -1,0 +1,46 @@
+@use '../../styles/vars';
+
+.currencies {
+  background-color: vars.$light-color;
+  text-align: left;
+  max-height: 50vh;
+  overflow-y: auto;
+  color: vars.$main-color;
+  font-weight: vars.$alt-weight;
+  border-radius: 0px 0px 15px 15px;
+  &-title {
+    font-family: 'Sniglet', cursive;
+    font-weight: vars.$main-weight;
+    margin: 1rem;
+  }
+
+  &-item {
+    padding: 1rem;
+    border-top: 1px solid vars.$main-color;
+		cursor: pointer;
+    transition: background-color 1s;
+
+    &:hover {
+      background-color: vars.$alt-color;
+      transition: background-color 0.2s;
+    }
+  }
+
+}
+
+// Scrollbar
+
+.currencies::-webkit-scrollbar {
+  width: 10px;
+}
+
+.currencies::-webkit-scrollbar-track {
+  background: vars.$light-color;
+}
+
+.currencies::-webkit-scrollbar-thumb {
+  background-color: vars.$main-color;
+  border-radius: 10px;
+  border: 2px solid vars.$light-color;
+}
+

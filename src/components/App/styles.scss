@@ -1,0 +1,15 @@
+@use '../../styles/vars';
+
+.app {
+  color: vars.$main-color;
+  width: 500px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  .app {
+    width: 80%;
+  }
+}
+  
